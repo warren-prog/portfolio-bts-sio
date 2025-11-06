@@ -1,19 +1,22 @@
-/* 🎨 Style général */
+/* 🌙 Thème sombre style développeur */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Poppins:wght@400;600&display=swap');
+
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #0f172a;
+  color: #e2e8f0;
   line-height: 1.6;
 }
 
 /* 🌐 Barre de navigation */
 header {
-  background-color: #1e40af;
-  color: white;
-  padding: 10px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid #1e293b;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .navbar {
@@ -22,12 +25,14 @@ header {
   align-items: center;
   max-width: 1100px;
   margin: auto;
-  padding: 0 20px;
+  padding: 12px 20px;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-family: "Fira Code", monospace;
+  font-weight: 600;
+  color: #38bdf8;
+  font-size: 1.4rem;
 }
 
 .nav-links {
@@ -39,64 +44,121 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: #e2e8f0;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active {
-  color: #93c5fd;
+  color: #38bdf8;
 }
 
-/* 🧩 Sections générales */
+/* 🏠 Hero section */
+.hero-home {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-home h1, .hero-home h2 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero-home .btn {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.hero-home .btn:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.05);
+}
+
+/* 💡 Sections */
 .page-section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 60px auto;
   padding: 20px;
 }
 
 .page-section h2 {
-  color: #1e3a8a;
-  margin-bottom: 10px;
+  font-family: "Fira Code", monospace;
+  font-size: 1.8rem;
+  color: #38bdf8;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.page-section p {
-  font-size: 1rem;
+/* 🧱 Cartes projets */
+.home-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
-/* 🌈 Section alternée */
-.alt-bg {
-  background-color: #e0e7ff;
-  padding: 40px 20px;
+.home-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(56, 189, 248, 0.3);
+}
+
+.home-card img {
+  width: 60%;          /* Taille moyenne */
+  max-width: 500px;    /* Limite la largeur sur grands écrans */
+  height: auto;        /* Garde le ratio */
+  margin: 15px auto;   /* Centrer les images */
+  display: block;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease;
 }
 
-/* 🖼️ Galerie d'images */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.gallery img {
-  max-width: 300px;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery img:hover {
+.home-card img:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 💼 Boutons */
+.home-card h3 {
+  color: #38bdf8;
+  font-family: "Fira Code", monospace;
+  font-size: 1.2rem;
+}
+
+.home-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* 🎮 Boutons */
 .btn {
   display: inline-block;
-  background-color: #2563eb;
-  color: white;
-  padding: 12px 24px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
@@ -104,80 +166,53 @@ header {
 }
 
 .btn:hover {
-  background-color: #1e40af;
+  background-color: #0ea5e9;
   transform: scale(1.05);
 }
 
-/* 📬 Formulaire de contact */
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.contact-info,
-.contact-form {
-  flex: 1 1 45%;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-family: inherit;
-}
-
-.contact-form button {
-  width: 100%;
-}
-
-/* 🧠 Compétences, listes, technologies */
-.tech-list,
-.feature-list {
-  list-style: none;
-  padding-left: 0;
-}
-
-.tech-list li,
-.feature-list li {
-  background-color: #f1f5f9;
-  margin: 6px 0;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-/* 🎮 Images du jeu */
-.project-image {
-  display: block;
-  margin: 20px auto;
-  max-width: 500px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* 🦶 Pied de page */
+/* 🦶 Footer */
 footer {
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #0f172a;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
-  font-size: 0.9rem;
+  padding: 20px 0;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
+}
+
+/* ✨ Effet écriture terminale */
+.typed-text {
+  border-right: 2px solid #38bdf8; /* Curseur bleu */
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  font-family: "Fira Code", monospace;
+  color: #38bdf8;
+  font-weight: 600;
+  font-size: 2.5rem;
+  vertical-align: middle;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.typed-subtext {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  font-family: "Fira Code", monospace;
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #38bdf8; }
 }
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    text-align: center;
   }
 
   .nav-links {
@@ -185,11 +220,64 @@ footer {
     gap: 10px;
   }
 
-  .contact-container {
-    flex-direction: column;
+  .hero-home h1 {
+    font-size: 2rem;
   }
 
-  .project-image {
-    max-width: 90%;
+  .hero-home h2 {
+    font-size: 1.2rem;
   }
+
+  .home-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .home-card img {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+/* 🏢 Page des stages */
+.stage-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.stage-card img {
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.stage-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.stage-info h3 {
+  color: #38bdf8;
+  font-family: "Fira Code", monospace;
+  font-size: 1.3rem;
+}
+
+.stage-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.stage-info ul li::before {
+  content: "▹ ";
+  color: #38bdf8;
+}
+
+.alt-bg {
+  background-color: #0f172a;
 }

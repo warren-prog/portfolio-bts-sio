@@ -25,9 +25,8 @@
   <!-- 🏠 Section d'accueil -->
   <section class="hero-home">
     <div class="hero-content">
-      <h1>Bonjour, je suis <span>Warren Edzang</span></h1>
-      <p>Étudiant en <strong>BTS SIO 2ᵉ année</strong> – Option SLAM</p>
-      <p>Passionné par le développement web et la création de projets innovants.</p>
+      <h1>Bonjour, je suis <span class="typed-text"></span></h1>
+      <h2><span class="typed-subtext"></span></h2>
       <a href="ppe1.html" class="btn">🚀 Découvrir mes projets</a>
     </div>
   </section>
@@ -35,7 +34,6 @@
   <!-- 💼 Aperçu rapide -->
   <section class="page-section alt-bg">
     <h2>💡 Mes Projets & Stages</h2>
-
     <div class="home-gallery">
       <!-- PPE1 -->
       <div class="home-card">
@@ -66,8 +64,7 @@
         <img src="images/jeu-devinette.png" alt="Jeu Devinette">
         <h3>Jeu Devinette</h3>
         <p>Un mini-jeu JavaScript où vous devez deviner le nombre choisi aléatoirement par l’ordinateur.</p>
-        <!-- 🔗 Remplace le lien ci-dessous par ton lien Netlify -->
-        <a href="https://ornate-buttercream-10b28d.netlify.app/" target="_blank" class="btn">🎮 Jouer maintenant</a>
+        <a href="https://jeu-devinette-warren.netlify.app/" target="_blank" class="btn">🎮 Jouer maintenant</a>
       </div>
     </div>
   </section>
@@ -76,5 +73,37 @@
   <footer>
     <p>© 2025 Warren Edzang – Portfolio BTS SIO SLAM</p>
   </footer>
+
+  <!-- 🖥️ Script effet écriture terminale -->
+  <script>
+  const mainText = "Warren Edzang";
+  const subText = "Développeur web / Étudiant BTS SIO SLAM";
+
+  const typedTextSpan = document.querySelector(".typed-text");
+  const typedSubtextSpan = document.querySelector(".typed-subtext");
+
+  let i = 0;
+  let j = 0;
+
+  function typeWriter() {
+    if (i < mainText.length) {
+      typedTextSpan.textContent += mainText.charAt(i);
+      i++;
+      setTimeout(typeWriter, 150);
+    } else {
+      setTimeout(typeWriterSub, 500);
+    }
+  }
+
+  function typeWriterSub() {
+    if (j < subText.length) {
+      typedSubtextSpan.textContent += subText.charAt(j);
+      j++;
+      setTimeout(typeWriterSub, 100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
 </body>
 </html>
