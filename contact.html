@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Mon Portfolio</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Mon Portfolio</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="bts-sio.html">BTS SIO / SLAM</a></li>
+        <li><a href="ppe1.html">PPE1</a></li>
+        <li><a href="stages.html">Stages</a></li>
+        <li><a href="veille.html">Veille Technologique</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Section titre -->
+  <section class="page-section hero-contact">
+    <h2>Contact</h2>
+    <p>Envie d’échanger à propos de mon parcours ou de mes projets ? Contactez-moi ci-dessous.</p>
+  </section>
+
+  <!-- Section contact -->
+  <section class="page-section">
+    <div class="contact-container">
+      <!-- Bloc CV et coordonnées -->
+      <div class="contact-info">
+        <h3>📄 Télécharger mon CV</h3>
+        <p>Vous pouvez consulter mon CV pour en savoir plus sur mes compétences et mon parcours.</p>
+        <a href="CV_warren_.pdf" download class="btn">Télécharger mon CV</a>
+
+        <h3 style="margin-top: 40px;">📧 Me contacter</h3>
+        <p><strong>Email :</strong> edzangwarren0@gmail.com</p>
+        <p><strong>Téléphone :</strong> 07 67 80 58 00</p>
+        <p><strong>Localisation :</strong> [Ta ville ou ton département]</p>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <div class="contact-form">
+        <h3>📬 Envoyer un message</h3>
+        <form action="https://formspree.io/f/xblpnzgl" method="POST">
+          <input type="text" name="nom" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre e-mail" required>
+          <textarea name="message" placeholder="Votre message..." rows="6" required></textarea>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Warren – Portfolio BTS SIO SLAM</p>
+  </footer>
+</body>
+</html>
