@@ -281,3 +281,17 @@ footer {
 .alt-bg {
   background-color: #0f172a;
 }
+.btn-veille {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #4A90E2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-veille:hover {
+    background-color: #357ABD;
+}
